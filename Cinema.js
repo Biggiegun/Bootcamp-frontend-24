@@ -25,8 +25,8 @@ class Cinema {
         return `${this.rows}`;
     }
 
-    showSeatStatus(row, seats, vacancy) {
-        return ((row * seats) - vacancy);
+    showSeatStatus(row, seats, busy) {
+        return ((row * seats) - busy);
     }
 
     reserveSeat(rowNumber, seatsNumer, state) {
@@ -60,8 +60,10 @@ class Seat {
         this.rowNumber = rowNumber;
         this.seatNumber = seatNumber;
         this.isBusy = isbusy;
-        this.counter += 1;
-        return this.counter;
+        if (this.isBusy === false) {
+            this.counter += 1;
+            return this.counter;
+        }
     }
 
 }
@@ -73,6 +75,9 @@ mySeat.reserve(1, 6, false);
 mySeat.reserve(1, 5, false);
 mySeat.reserve(1, 4, false);
 mySeat.reserve(1, 3, false);
+// There are two already reserved seats -non registered-.
+mySeat.reserve(1, 8, true);
+mySeat.reserve(1, 9, true);
 mySeat.reserve(1, 2, false);
 Seat.counter = mySeat.reserve(1, 1, false);
 console.log("Number of reserved seats:" + Seat.counter);
@@ -92,5 +97,5 @@ console.log(Cinema.rows);
 console.log('Initial capacity ')
 console.log(myCinema.showSeatStatus(Cinema.rows, Cinema.seats, 0));
 
-console.log("Current busy seats: ")
+console.log("Current free seats: ")
 console.log(myCinema.showSeatStatus(Cinema.rows, Cinema.seats, Seat.counter));
