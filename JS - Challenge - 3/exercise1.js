@@ -10,7 +10,8 @@ async function loadJson(url) {
     const result = await fetch(url)
 
     if (result.status == 200) {
-        return result.json();
+        const info = result.json();
+        return info;
     } else {
         throw new HttpError(result);
     }
