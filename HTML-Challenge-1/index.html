@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
     <title>Employee Card</title>
 </head>
+
 <body>
-    
+    <h1> Under this tag comes the employee card</h1>
+    <card-employee>
+        <div>
+            <h3>House of Dreams Co.</h3>
+            <img src="./employee.png" alt="employee's image">
+            <h3>Louise Village</h3>
+            <h4>Real Estate Agent</h4>
+        </div>
+    </card-employee>
 </body>
 
 <script>
-    class card {
 
+    // Class & Attaching a shadow DOM
+    class Card extends HTMLElement {
+        constructor() {
+            super();
+            this.shadow = this.attachShadow({ mode: "open" });
+            this.shadow.appendChild(document.createElement('slot'));
+        }
     }
+
+    // Register
+    customElements.define('card-employee', Card);
+
 </script>
+
 </html>
