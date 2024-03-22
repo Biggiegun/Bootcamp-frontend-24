@@ -9,23 +9,17 @@
 </head>
 
 <body>
-    <h1> Under this tag comes the employee card...</h1>
-    <div class="buttonDiv">
-        <button onclick="displayCard()"> Click to display my personal info</button>
-    </div>
+    <card-employee></card-employee>
 
-    <template>
-        <card-employee>
+    <template id="myTemplate">
+        <div id="myCard">
             <div>
-                <div>
-                    <h3>House of Dreams Co.</h3>
-                    <img src="./employee.png" alt="employee's image">
-                    <h3>Louise Village</h3>
-                    <h4>Real Estate Agent</h4>
-
-                </div>
+                <h3>House of Dreams Co.</h3>
+                <img src="./employee.png" alt="employee's image">
+                <h3>Louise Village</h3>
+                <h4>Real Estate Agent</h4>
             </div>
-        </card-employee>
+        </div>
     </template>
 </body>
 
@@ -36,20 +30,13 @@
         constructor() {
             super();
             this.shadow = this.attachShadow({ mode: "open" });
-            this.shadow.appendChild(document.createElement('slot'));
+            this.shadow.appendChild(document.getElementById('myTemplate').content.cloneNode(true));
         }
     }
 
     // Register
     customElements.define('card-employee', Card);
-
-    displayCard = () => {
-        let temp = document.getElementsByTagName("template")[0];
-        let clon = temp.content.cloneNode(true);
-        document.body.appendChild(clon);
-        document.querySelector('button').setAttribute('class', 'displayNone');
-    };
-
+    document.querySelector('img').setAttribute('id','myImg');
 </script>
 
 </html>
