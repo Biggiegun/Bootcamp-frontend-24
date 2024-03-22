@@ -2,6 +2,26 @@ body {
     background-color: #743c44;
 }
 
+button{
+    background-color: #d4d5d2;
+    border-radius: 4%;
+    color: #3c2c2c;
+    cursor: pointer;
+    height: 100%;
+    padding: 1%;
+    transition: transform .5s;
+}
+
+button:hover{
+    transform: translateX(5px);
+}
+
+.buttonDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 card-employee>div {
     display: flex;
     flex-direction: column;
@@ -29,20 +49,25 @@ card-employee>div>div:hover {
     transform: scale(1.25);
 }
 
+.displayNone {
+    display: none;
+}
+
 h1 {
     color: #d4d5d2;
 }
 
 h3 {
     color: #743c44;
-
 }
 
 h4 {
     background-color: #743c44;
     padding: 1%;
     border-radius: 5%;
-    color: #d4d5d2
+    color: #d4d5d2;
+    padding-left: 20%;
+    padding-right: 20%;
 }
 
 img {

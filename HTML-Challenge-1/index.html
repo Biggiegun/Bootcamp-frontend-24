@@ -10,16 +10,23 @@
 
 <body>
     <h1> Under this tag comes the employee card...</h1>
-    <card-employee>
-        <div>
+    <div class="buttonDiv">
+        <button onclick="displayCard()"> Click to display my personal info</button>
+    </div>
+
+    <template>
+        <card-employee>
             <div>
-                <h3>House of Dreams Co.</h3>
-                <img src="./employee.png" alt="employee's image">
-                <h3>Louise Village</h3>
-                <h4>Real Estate Agent</h4>
+                <div>
+                    <h3>House of Dreams Co.</h3>
+                    <img src="./employee.png" alt="employee's image">
+                    <h3>Louise Village</h3>
+                    <h4>Real Estate Agent</h4>
+
+                </div>
             </div>
-        </div>
-    </card-employee>
+        </card-employee>
+    </template>
 </body>
 
 <script>
@@ -35,6 +42,13 @@
 
     // Register
     customElements.define('card-employee', Card);
+
+    displayCard = () => {
+        let temp = document.getElementsByTagName("template")[0];
+        let clon = temp.content.cloneNode(true);
+        document.body.appendChild(clon);
+        document.querySelector('button').setAttribute('class', 'displayNone');
+    };
 
 </script>
 
