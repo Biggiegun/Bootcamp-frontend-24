@@ -1,0 +1,37 @@
+/* Yu gi Styles*/
+
+body {
+    margin: 10vh;
+}
+
+#mainCard {
+    align-items: center;
+    border: 2px solid aquamarine;
+    background-color: darkblue;
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+#header {
+    border: 2px solid aquamarine;
+}
+
+#subheader {
+    border: 2px solid aquamarine;
+}
+
+#body_ {
+    border: 2px solid palevioletred;
+    padding: 15%;
+}
+
+#footer {
+    border: 2px solid aquamarine;
+}
+
+#subcontent1 {}
+
+#subcontent2 {}
