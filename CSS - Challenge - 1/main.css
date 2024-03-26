@@ -1,37 +1,50 @@
 /* Yu gi Styles*/
 
 body {
-    margin: 10vh;
+    padding-left: 35%;
+    padding-right: 35%;
+
+
 }
 
 #mainCard {
-    align-items: center;
-    border: 2px solid aquamarine;
+    align-items: stretch;
+    border: 5px solid aquamarine;
     background-color: darkblue;
     color: aliceblue;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-
+    gap: 1vw 10vh;
+    margin-top: 10%;
 }
 
 #header {
+    margin:1vh 1vw 1vh 1vw;
     border: 2px solid aquamarine;
 }
 
 #subheader {
     border: 2px solid aquamarine;
+    margin:1vh 2vw 1vh 2vw;
 }
 
 #body_ {
     border: 2px solid palevioletred;
-    padding: 15%;
+    margin:1vh 2vw 1vh 2vw;
 }
 
 #footer {
     border: 2px solid aquamarine;
+    margin:0vh 1vw 1vh 1vw;
 }
 
-#subcontent1 {}
+#subcontent1 {
+    border: 2px solid palevioletred;
+    margin:1vh 0.5vw 1vh 0.5vw;
 
-#subcontent2 {}
+}
+
+#subcontent2 {
+    border: 2px solid palevioletred;
+    margin:1vh 0.5vw 1vh 0.5vw;
+}
