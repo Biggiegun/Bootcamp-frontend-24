@@ -6,8 +6,8 @@ body {
 }
 
 .mainCard {
-    border: 5px solid gray;
-    background-color: #ceb07c;
+    border: 10px solid gray;
+    background-color: #b59661;
     color: black;
     display: flex;
     flex-direction: column;
@@ -28,9 +28,9 @@ body {
     justify-content: flex-end;
 }
 
-.subheader img{
-    max-width:10%;
-    max-height:10%;
+.subheader img {
+    max-width: 10%;
+    max-height: 10%;
 }
 
 .body_ {
@@ -48,8 +48,9 @@ body {
 .footer {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(160, 1, 1);
+    border: 2px solid rgb(212, 102, 29);
     margin: 0vh 1vw 1vh 1vw;
+    background-color: #ffefd5;
 
 }
 
